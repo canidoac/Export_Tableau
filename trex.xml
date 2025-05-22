@@ -7,7 +7,7 @@
     <author name="" email="" organization="" website="" />
     <min-api-version>1.0</min-api-version>
     <source-location>
-      <url>https://localhost:8765/index.html</url>
+     <url>https://canidoac.github.io/Export_Tableau/index.html</url>
     </source-location>
     <icon>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAlhJREFUOI2Nk0tIlGEUhp/v/2acmcYbXlAz8YKXIqwoKohWEbRpEVEEQYsWQRCBRdAFIlq0KAiCaOUmWkRRCxE1K8IUDLQkUBs1L5SXRLw1OjP/5WsxFjbVgWd3znme9+XAOSJqrU0iEjKzC865S8aYSmNMpTHmkojUOOdKnXM7IrJkrU2KyEEcEQ+wD7gGNDjnLgKBY3iBKHAfGABmgFpgF/jtnCsBCoCwc+4G0CgiJ/8KiEgIOAs8BsaAZaAYqAdqRKQFGDTGvAcagONAFzAiIgERKQBKnXPXgSYRKT4QOGttEigWkTpgHJgCvgNLQDPwDHgLfAE+AiGgHJgEFkXEiEjIOVcN3BGRMhHJiIgJiEjEGLMBjIrIY+fcLJAGbgLrQAr4CRwCCo0xK8A2sA8sANPOuSkRWQUyIpLyRCQsIh+MMXeB+8Aj4CpwJJvNHvb7/T6fz7cJ5PP5vHPOBINBHwDQCowAH4EqY8yaiKw4EYkYY1aB18ArEdkQkTTQlMlkjvr9/jUgJyK+TCbj2tvbdXx8XLu6unRwcFDb2tq0paVFe3p6tLe3V/v6+nRkZGQ9m83+EpGIJyIRY8wq8ExEXuYTQl9f33ogEFgDcvl8Xmq1o6NDx8bGtL+/X4eGhnRiYkKnpqZ0cXFRl5eXdWVlRVdXV3VjY0PX19d1bm5u3RiTEpGIsdYmnXNFIlLnnJvJ5XKHUqmUL51O+7a2trKFQsGXy+V8hULBl06nfZubm9lUKuVLJpPZeDyejcViO/F4fCcej2+KyJwxJvkHdct/gN4BJhEAAAAASUVORK5CYII=</icon>
     <permissions>
