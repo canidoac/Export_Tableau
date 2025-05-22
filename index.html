@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau Export Extension</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://extensions.tableau.com/extensions/TableauSDK.js"></script>
+  <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+  <div id="app" class="container mx-auto p-6 max-w-3xl">
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="text-2xl font-bold text-gray-800">Tableau Data Export</h1>
+        <div id="status" class="text-sm text-gray-500"></div>
+      </div>
+      
+      <div class="mb-6">
+        <h2 class="text-lg font-semibold mb-2 text-gray-700">Datos disponibles</h2>
+        <div id="dataInfo" class="text-sm text-gray-600 mb-4">
+          Cargando información de datos...
+        </div>
+        <div class="flex flex-col space-y-2">
+          <div class="flex items-center">
+            <input type="checkbox" id="includeHeaders" class="mr-2" checked>
+            <label for="includeHeaders" class="text-sm text-gray-700">Incluir encabezados</label>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" id="includeAllColumns" class="mr-2" checked>
+            <label for="includeAllColumns" class="text-sm text-gray-700">Incluir todas las columnas</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <button id="exportCSV" class="bg-emerald-600 hover:bg-emerald-700 text-white py-2 px-4 rounded-md flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Exportar a CSV
+        </button>
+        <button id="exportGSheets" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Exportar a Google Sheets
+        </button>
+      </div>
+      
+      <div id="gsheetOptions" class="hidden bg-gray-100 p-4 rounded-md mb-6">
+        <h3 class="text-md font-semibold mb-2 text-gray-700">Opciones de Google Sheets</h3>
+        <div class="mb-4">
+          <label for="sheetName" class="block text-sm text-gray-600 mb-1">Nombre de la hoja</label>
+          <input type="text" id="sheetName" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Datos de Tableau">
+        </div>
+        <div class="flex justify-end">
+          <button id="createSheet" class="bg-blue-600 hover:bg-blue-700 text-white py-1 px-3 rounded-md text-sm">
+            Crear hoja
+          </button>
+        </div>
+      </div>
+      
+      <div id="exportStatus" class="hidden p-4 rounded-md mb-4"></div>
+    </div>
+    
+    <div class="mt-6 text-sm text-gray-500 text-center">
+      <p>Tableau Data Export Extension v1.0</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "Tableau Data Export",
+  "version": "1.0.0",
+  "description": "Extensión para exportar datos de Tableau a CSV o Google Sheets",
+  "author": "",
+  "permissions": ["clipboard", "storage"],
+  "homepage_url": "",
+  "default_locale": "es",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.tableau.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "manifest_version": 2,
+  "tableau_extension": {
+    "name": "Tableau Data Export",
+    "description": "Exporta datos de Tableau a CSV o Google Sheets",
+    "version": "1.0.0",
+    "min_api_version": "1.0",
+    "source_location": {
+      "url": "index.html"
+    },
+    "icon": "icons/icon.png",
+    "permissions": [
+      {
+        "type": "worksheet",
+        "mode": "read"
+      }
+    ]
+  }
+}
